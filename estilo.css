@@ -1,0 +1,1219 @@
+body {
+margin: 0;
+font-family: "Gotag", "Arial", sans-serif;
+background-color: #0c1f35;
+color: #f9f5e5;
+justify-content: center;
+}
+.Cortinilla{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(22, 57, 90);
+    overflow: hidden;
+    width:100vw ;
+    height:100vh;
+   
+    position:absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999999;
+    animation-delay: 2s;
+    animation-name: anima_cortina;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+   
+}
+@keyframes anima_cortina{
+    0%{
+        height: 100vh;
+    }
+    35%{
+        height: 50vh;
+        background-color: rgb(114, 65, 46);
+        
+    }
+    75%{
+        height: 100vh;
+        background-color: rgb(11, 49, 80)
+    }
+    100%{
+        height: 0vh;
+        background-color: rgb(204, 121, 27)
+        
+    }
+
+}
+.logo_cortina{
+   
+    background-image: url(../img/Logo\ fuego\ eterno@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30vw;
+    width: 30vh;
+    height: 100vh;
+    animation-name: anima_logo;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    position: relative;
+   
+
+}
+@keyframes anima_logo {
+    0%{
+        transform: scale(0);
+        opacity:0;
+    }
+    100%{
+        transform: scale(1);
+        opacity:1;
+    }
+}
+
+
+ /*Barra del menú */   
+header.header {
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 1rem 3rem;
+background-color: #071422;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+header a:hover:not(.logoin) 
+{
+background: rgb(255, 115, 0);
+border-radius: 50px 0px 50px;
+color: #071422;
+padding: 1rem;
+}
+.logo a:hover {
+  background: transparent;
+}
+       
+header{
+display: flex;
+justify-content: space-around;
+justify-items: center;
+margin: 0;
+padding: 2rem;
+font-size: 2.5rem;
+}
+
+.menu{
+width: 100%;
+display: flex;
+}
+
+.inicio{
+width: 200px;
+margin-left: 10rem;
+}
+.logoini {
+width: 200px;
+}
+
+nav.menu a {
+margin-left: 4rem;
+color: #f9f5e5;
+text-decoration: none;
+font-weight: 500;
+}
+nav.menu a:hover{
+color: #120a35;
+font-weight: 500;
+
+} 
+/* Oculta checkbox y botón hamburguesa por defecto */
+#menu-toggle,
+.navbar-toggle {
+  display: none;
+}
+
+/* Estilos para el menú en pantallas grandes */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+
+/* ESTILOS SOLO PARA CELULARES */
+@media (max-width: 768px) {
+  /* Mostrar ícono hamburguesa */
+  .navbar-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 2;
+  }
+
+  /* Ocultar el menú por defecto */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: rgb(5, 45, 71);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+ 
+  #menu-toggle:checked + .navbar-toggle + .menu {
+    display: flex;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  header.header {
+    padding: 1rem 2rem;
+  }
+
+  .logo .inicio {
+    width: 140px; /* logo más pequeño */
+  }
+
+  nav.menu {
+    gap: 12px;
+    font-size: 1rem;
+  }
+
+  nav.menu a {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  header.header {
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  /* Muestra el icono hamburguesa */
+  .navbar-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+  }
+
+  /* Oculta el menú inicialmente */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: rgb(5, 45, 71);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Muestra menú cuando checkbox está chequeado */
+  #menu-toggle:checked + .navbar-toggle + .menu {
+    display: flex;
+  }
+
+  nav.menu a {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  /* Cambia el logo */
+  .logo .inicio {
+    display: none; /* oculta logo grande */
+  }
+
+  .logo .logo-celular {
+    display: block;
+    width: 120px;
+  }
+}
+
+ /*Sección del home */  
+#home{
+background-size: contain;
+background-repeat: no-repeat;
+padding: 16px;
+width:100%;
+height: auto;
+display: flex;
+margin: 0;
+padding: 0;
+}
+ 
+    
+.contenthome {  
+width: 40%;
+color: #eeeef0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 2rem;
+text-align: center;
+background-color: transparent;
+}
+  
+.recursohome{
+width: 60%;
+height: 100hv;
+background-image: url("../img/FONDO\ INI.png"); 
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+
+}
+  
+.logohome{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.textohome{
+  max-width: 50%;
+  margin-bottom: 20px;
+  text-align: right;
+  font-family: Arial;
+}
+
+.textohome h1 {
+  font-family: gotag;
+  font-size: 1.8rem;
+  color: #ff6200;
+  margin-bottom: 1rem;
+}
+
+.textohome,.textorevista p {
+  font-size: 2.5rem;
+  color: #eeeef0;
+  padding-left: 2rem;
+}
+
+/* === Tablet (768px x 1024px) === */
+@media (max-width: 1024px) {
+  #home {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .recursohome {
+    width: 50%;
+    height: 50vh;
+    margin-top: 0;
+  }
+
+  .contenthome {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .textohome {
+    max-width: 80%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .textohome h1 {
+    font-size: 2rem;
+  }
+
+  .textohome p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
+
+
+
+
+
+/*Sección del trailer*/  
+
+.trailer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(34, 44, 33);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  margin-top: 1rem;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* para que el video no se deforme :)*/
+}
+
+/* === ESTILOS BASE (Web 1280x720) === */
+#trailer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(34, 44, 33);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* === TABLET (768x1024) === */
+@media (max-width: 1024px) {
+  #trailer {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
+  }
+
+  .video video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+}
+
+
+/* === CELULAR (412x915) === */
+@media (max-width: 480px) {
+  #trailer {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
+  }
+
+  .video video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+}
+
+
+
+/*Sección de la revista */  
+.revista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  height: 100vh;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+}
+.revista img {
+    margin-top: 1rem;
+    width: 50%;
+    background-image: url(../img/2x/mockup-revista@2x.png);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    margin-left: 16px;
+}
+.mock_up {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mock_up img {
+  max-width: 100%;
+  height: auto;
+}
+.textorevista{
+flex: 1;
+min-width: 300px;
+color: #eeeef0;
+text-align: left;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 2rem;
+font-family: Arial;
+
+
+}
+.textorevista h1 {
+font-family: gotag;
+font-weight: 100;
+font-size: 5rem;
+color: #ff6200;
+margin-bottom: 1.2rem;
+
+}
+
+.botones {
+margin-top: 5rem;
+
+}
+
+.botonpdf, .botonleer {
+  width: 20%;
+  background-color: #f98758;
+  color: #0c1f35;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+  justify-content: center;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+ .botonpdf:hover, .botonleer:hover {
+      background-color: #005fa3;
+      color: #f98758;
+    }
+
+
+    /* Fondo oscuro para el visor tipo modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(161, 14, 14, 0.315);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Se activa cuando hay un #revistaModal en la URL */
+.modal-overlay:target {
+  display: flex;
+}
+
+/* Contenedor del visor */
+.modal-content {
+  position: relative;
+  width: 95%;
+  height: 90%;
+  background-color: #eeeef0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(172, 24, 24, 0.3);
+  padding-top: 7rem;
+}
+
+/* El visor PDF ocupa toda la ventana del modal */
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Botón para cerrar */
+.cerrar-modal {
+  position: absolute;
+  top: 1-0px;
+  right: 15px;
+  font-size: 40px;
+  color: #eeeef0;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1001;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: background  0.3s;
+}
+
+.cerrar-modal:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* === TABLET (768x1024) === */
+@media (max-width: 1024px) {
+  .revista {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .textorevista {
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .textorevista h1 {
+    font-size: 3.5rem;
+  }
+
+  .textorevista p {
+    font-size: 1.5rem;
+  }
+
+  .botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botonpdf,
+  .botonleer {
+    width: 80%;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+  }
+}
+
+
+/* === CELULAR (412x915) === */
+@media (max-width: 480px) {
+  .revista {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .textorevista h1 {
+    font-size: 3rem;
+  }
+
+  .textorevista p {
+    font-size: 1.3rem;
+  }
+
+  .botonpdf,
+  .botonleer {
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+}
+
+
+/*Sección personajes  */
+
+.personajes {
+height: 100vh;
+background-color: #112b45;
+padding: 3rem 2rem;
+text-align: center;
+overflow: hidden;
+font-size: 2rem;
+color:#ff6200
+
+
+}
+
+.lista-personajes {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  
+}
+
+.personaje {
+  background-color: #1e3b5c;
+  padding: 0;
+  border-radius: 10px;
+  width: 300px;
+ 
+  
+  min-height: 600px;
+  max-height: 90vh; /* que nunca mida más que la pantalla */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eeeef0;
+  font-weight: bold;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.card {
+width: 100%;
+height: 100%;
+position: relative;
+transform-style: preserve-3d;
+transition: transform 0.8s;
+}
+
+.personaje:hover .card {
+transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 10px;
+backface-visibility: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card-front {
+background-size: cover;
+background-position: center;
+}
+
+#candileja .card-front {
+background-image: url(../img/Candileja.png);
+background-size: contain;
+background-repeat: no-repeat;
+max-height: 100vh;
+
+}
+#kuwai .card-front {
+background-image: url(../img/Kuwai.png);
+background-size: contain;
+background-repeat: no-repeat;
+max-height: 100vh;
+
+}
+#isabella .card-front {
+background-image: url(../img/isa.png);
+background-size: contain;
+background-repeat: no-repeat;
+max-height: 100vh;
+
+}
+#herminia .card-front {
+background-image: url(../img/herminia.png);
+background-size: contain;
+background-repeat: no-repeat;
+max-height: 100vh;
+
+}
+.card-back {
+color: #ff6200;
+font-size: 40px;
+transform: rotateY(180deg);
+display: flex;
+flex-direction: column;
+}
+
+
+
+#candileja .card-back p,#kuwai .card-back p, #isabella  .card-back p, #herminia .card-back p {
+  width: 80%;
+  max-width: 400px; 
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #eeeef0;
+  flex-direction: row;
+}
+#candileja .card-back h1,#kuwai .card-back h1, #isabella  .card-back h1, #herminia .card-back h1 {
+  width: 100%;
+  max-width: 400px; 
+  font-family: gotag;
+  font-size: 2rem;
+  color:#f98758;
+  flex-direction: row;
+}
+
+/* ----- Tablet (768px – 1024px) ----- */
+@media (max-width: 1024px) {
+  .personaje {
+    width: 90%;
+    aspect-ratio: 3 / 4;
+    min-height: 500px;
+  }
+  .personajes{
+    background-color: #112b45;
+  padding: 3rem 2rem;
+  text-align: center;
+  overflow: hidden;
+
+  min-height: 100vh;  /* mínimo el alto del viewport */
+  height: auto;
+  }
+
+  .card-back h1 {
+    font-size: 2rem;
+  }
+
+  .card-back p {
+    font-size: 1.2rem;
+  }
+}
+
+/* ----- Móvil (412px – 480px) ----- */
+@media (max-width: 480px) {
+  .personaje {
+    width: 100%;
+    aspect-ratio: 3 / 5;
+   
+    min-height: 100vh;  /* mínimo el alto del viewport */
+    height: auto;
+
+  }
+
+  .personajes h2 {
+    font-size: 2.5rem;
+  }
+
+  .card-back h1 {
+    font-size: 1.6rem;
+  }
+
+  .card-back p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/*Sección amuletos*/
+
+.title_amuletos{
+  width: 100%;
+  color:#f98758;
+  text-align: right;
+  justify-content: right;
+  font-size: 3rem;
+}
+
+h1{
+  margin-top: 3rem; 
+  padding-top: 2rem;
+  text-align: center;
+  justify-content: center;
+  font-family: gotag;
+  font-size: 3rem;
+  font-weight: bold;
+  color:#ff6200;
+}
+h3{
+  font-family: arial;
+  font-size: 2rem;
+  font-weight: bold;
+  color:#eeeef0;
+}
+.amuletos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 6rem auto 2rem auto;
+  padding: 3rem 1rem;
+}
+
+
+.blanco{
+    background-color:#f98758;
+    width:100%;
+    max-width: unset;
+    height: 100%;
+    max-height: 450px;
+    border-radius: 16px;
+    box-shadow: 3px 2px 5px;
+    margin-top: 1rem;
+    margin: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+
+}
+.foto{
+   
+    width:100%;
+    height:150px;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+    
+}
+
+.foto_amuleto{
+    background-image: url(../img/perfil.png);
+    width: 200px;;
+    height:200px;
+    border-radius: 300px;
+    border: solid white 5px;
+    position: absolute;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#amuleto1{
+  background-image:url(../img/colgante\ recuerdo.jpg);
+  background-size: cover;
+  background-repeat: no repeat;
+  justify-content: center;
+  background-position: 50%;
+}
+#amuleto2{
+  background-image:url(../img/cinturón.jpg);
+  background-size: cover;
+  background-repeat: no repeat;
+  background-position: 50%;
+}
+#amuleto3{
+  background-image:url(../img/origen.jpg);
+  background-size: contain;
+  background-repeat: no repeat;
+}
+#amuleto4{
+  background-image:url(../img/piedra.jpg);
+  background-size: cover;
+  background-repeat: no repeat;
+  background-position: 50%;
+
+}
+#amuleto5{
+  background-image:url(../img/sol.jpg);
+  background-size: cover ;
+  background-repeat: no repeat;
+  background-position: 50%;
+}
+#amuleto6{
+  background-image:url(../img/amuleto.jpg);
+  background-size: cover ;
+  background-repeat: no repeat;
+  background-position: 50%;
+}
+
+
+
+.texto{
+    width: 80%;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-bottom: 20%;
+}
+h3{
+    flex-direction: row;
+    color: #112b45;
+    margin-top: 1rem; 
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+#amuleto4, #amuleto5, #amuleto6{
+  margin-top: 15rem;
+  top: -300px;
+}
+
+@media (min-width: 1280px) {
+  
+  .texto {
+    width: 90%;
+    padding-left: 5%;
+    top:-10%
+  }
+  .blanco {
+    height: 460px;
+  }
+
+    }
+
+
+/* 768px × 1024px - Tablet */
+@media (max-width: 1024px) {
+  .amuletos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .foto_amuleto {
+    width: 160px;
+    height: 160px;
+    top: -80px;
+  }
+
+  .blanco {
+    height: 460px;
+  }
+
+  .texto {
+    width: 90%;
+    padding-left: 5%;
+  }
+}
+
+/* 412px × 915px - Celular */
+@media (max-width: 600px) {
+  .amuletos {
+    grid-template-columns: 1fr;
+  }
+
+  .foto_amuleto {
+    width: 140px;
+    height: 140px;
+    top: -160px;
+  }
+  #amuleto4, #amuleto5, #amuleto6{
+  margin-top: 10rem;
+  top: -320px;
+}
+  .blanco {
+    height: auto;
+    padding-top: 5rem;
+    margin-top: 4rem;
+  }
+
+  .texto {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+}
+
+   /*descargar videojuego*/
+
+
+
+.descarga {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+  overflow: visible;
+  z-index: 1;
+  padding: 0;
+}
+
+.imadiagonal {
+  position: relative;
+  width: 100%;
+  min-height: 120vh; 
+  display: flex;
+  background-image: url(../img/2x/imadiagonalfondo.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  margin-top: -5vh; 
+  margin-bottom: -5vh; 
+}
+
+.botonesdescargajuego {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #0c1f35;
+  z-index: 3;
+}
+h1{
+  font-family: gotag;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #112b45;
+}
+.botonesdescargajuego p{
+  font-family: arial;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #112b45;
+
+}
+.botonesdescargajuego h1{
+  color:#eeeef0;
+}
+
+.imaceldescarga {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.mockup-dispositivos {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  z-index: 3;
+}
+
+.boton-descargaapk {
+  background-color: #0c1f35;
+  color: #eeeef0;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: gothag, arial;
+}
+
+.botonesdescargajuego h1 {
+  color:#eeeef0;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.botonesdescargajuego p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Tablet: 768px x 1024px */
+@media screen and (max-width: 768px) {
+  .imadiagonal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .botonesdescargajuego, .imaceldescarga {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .mockup-dispositivos {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .botonesdescargajuego h1 {
+    font-size: 2.3rem;
+  }
+
+  .boton-descargaapk {
+    font-size: 1.4rem;
+  }
+}
+
+/* Celular: 412px x 915px */
+@media screen and (max-width: 480px) {
+  .imadiagonal {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+  }
+
+  .botonesdescargajuego,
+  .imaceldescarga {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 3rem;
+    text-align: center;
+  }
+
+  .mockup-dispositivos {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .botonesdescargajuego h1 {
+    font-size: 2rem;
+    padding-top: 3rem;
+    
+  }
+
+  .botonesdescargajuego p {
+    font-size: 1.2rem;
+    padding-top: 3rem;
+    
+  }
+
+  .boton-descargaapk {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* footer y contacto */
+.footer {
+  width: 100%;
+  max-height: 500px;
+  background-color: #071422;
+  color: #7c5a5a;
+  padding: 1rem 2rem;
+  text-align: center;
+ 
+}
+
+.footer .redes a {
+  margin: 0 1rem;
+  color: #f98758;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.redes{
+  justify-content: center;
+  align-items: center;
+  
+}
+.redes p{
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  font-size: 1.5rem;
+}
+
+/* Celular: 412px x 915px */
+
+@media screen and (max-width: 480px)
+  {
+.footer .redes a {
+margin: 0 1rem;
+color: #f98758;
+text-decoration: none;
+font-size: 0.2rem;
+}
+.redes p{
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  font-size: 0.2rem;
+}
+
+}

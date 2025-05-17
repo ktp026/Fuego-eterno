@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuego Eterno Oficial</title>
+  <link rel="stylesheet" href="css/estilo.css">
+   <link href="https://fonts.cdnfonts.com/css/gotag" rel="stylesheet">
+</head>
+<body>
+  <div class="Cortinilla">
+    <div class="logo_cortina">
+  </div> 
+  </div>
+
+  
+  <header class="header">
+    <a href="#home">
+      <div class="logoin">
+        <img src="img/Logo fuego eterno@2x.png" alt="Logo menu" class="inicio">
+        <!-- <img src="img/LOGO CEL.png" alt="Logo celular" class="logo-celular"> -->
+      </div>
+    </a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="navbar-toggle">&#9776;</label>
+    
+    <nav class="menu">
+      <a href=#trailer>Trailer</a>
+      <a href="#revista">Revista</a></li>
+      <a href="#personajes">Personajes</a></li>
+      <a href="#amuletos">Amuletos</a></li>
+      <a href="#descarga">Descargar</a></li>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  
+      <section id="home">
+        <div class="recursohome">
+        </div>  
+        <div class="contenthome">
+          
+          <div class="logohome">
+            <img src="img/Logo fuego eterno@2x.png" alt="Logo Fuego Eterno" class="logo"> 
+          </div>
+          <div class="textohome">    
+            <h1>¡ALGUIEN HA DESPERTADO!</h1>
+            <p>
+              Solo un grupo de viajeros, guiados por la raíz, la resistencia y el recuerdo,
+              puede enfrentarse a la verdad... y decidir si el fuego será castigo o redención.
+              Adéntrate en esta aventura y conoce a los personajes que ayudarán a salvar
+              el pueblo de Villavicencio y mantener vivo el legado.
+            </p>
+          </div>   
+        </div>
+      </section>
+
+      <section id="trailer" class="trailer">
+        <div class="video">
+          <video id="videoTrailer" src="Video/Trailer Fuego Eterno.mp4" controls autoplay muted></video>
+
+          <script>
+            const video = document.getElementById('videoTrailer');
+          
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach(entry => {
+                  if (!entry.isIntersecting && !video.paused) {
+                    video.pause();
+                  }
+                });
+              },
+              {
+                threshold: 0.5 // Se pausa si menos del 50% del video es visible
+              }
+            );
+          
+            observer.observe(video);
+          </script>    
+        </div>
+      </section>
+
+      <section id="revista" class="revista">
+         <div class="textorevista"> 
+          <h1>Revista</h1>
+          <p>
+            Conoce la historia detrás de Fuego Eterno como nunca antes. Explora la revista oficial del videojuego y sumérgete en los orígenes de los personajes que lucharán por salvar al pueblo de Villavicencio y proteger un legado ancestral.
+            ¿Quieres descubrir cómo se juega, quiénes son los protagonistas y qué secretos esconde esta aventura?
+            <br><br>¡Haz clic y disfruta de cada página!
+          </p>
+
+          <div class="botones">
+            <a href="PDF/Fuego eterno propuesta 1.pdf" download class="botonpdf">Descargar PDF</a>
+            <a href="#revistaModal" class="botonleer">Leer en línea</a>
+          </div>
+
+          <!-- Modal del visor en línea -->
+          <div id="revistaModal" class="modal-overlay">
+            <div class="modal-content">
+              <a href="#" class="cerrar-modal">&times;</a>
+              <iframe src="PDF/Fuego eterno propuesta 1.pdf"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="mock_up">
+          <img src="img/2x/mockup-revista@2x.png" alt="Mockup Revista">
+        </div>
+</section>
+
+        
+
+
+      <section id="personajes" class="personajes">
+        <h2>Personajes</h2>
+        <div class="lista-personajes">
+          <div class="personaje" id="candileja">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back">
+                <h1>La Candileja</h1>
+                <p>La Candileja no lanza fuego cualquiera. Sus llamas tienen historia: la roja quema con toda su rabia, la dorada te enfrenta a lo que no quieres recordar, y la blanca apaga la esperanza con pura tristeza. No te preocupes por correr… su fuego no persigue el cuerpo, sino el alma.
+                  ¿Te atreves a enfrentarte a ella?
+                </p>
+              </div>
+            </div>
+         </div>
+
+          <div class="personaje" id="kuwai">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back">
+                <h1>Kuwai Yatocana</h1>
+                <p>Aunque no cree en espantos como La Candileja, su visión del mundo cambia cuando se enfrenta cara a cara con ella</p>
+              </div>
+            </div>
+          </div>
+          <div class="personaje" id="isabella">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back">
+                <h1>Isabella Rodríguez</h1>
+                <p>Su poder no está en la fuerza bruta, sino en su resiliencia y su coraje ancestral. No lidera con palabras, sino con acciones silenciosas y valientes.
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="personaje" id="herminia">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back">
+                <h1>Doña Herminia</h1>
+                <p> No necesita gritar para ser escuchada.Su conexión con La Candileja la convierte en guardiana de un pasado que muchos han querido enterrar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        
+      </section>
+        <div class="title_amuletos">
+            <h1>Amuletos</h1>
+          </div>
+        <section id="amuletos" class="amuletos">
+        
+        <div class="blanco">
+            <div class="foto">        
+                <div class="foto_amuleto" id ="amuleto1">
+                </div>
+            </div>
+            <div class="texto">
+                <h1>COLGANTE DEL RECUERDO</h1>
+                <h3>Protege contra el olvido y revela verdades ocultas del pasado.</h3>
+            </div>
+        </div>  
+   
+
+        <div class="blanco">
+            <div class="foto">        
+                <div class="foto_amuleto" id ="amuleto2">
+                </div>
+            </div>
+            <div class="texto">
+                <h1>CORAJE ANCESTRAL</h1>
+                <h3>Brindan fortaleza física y mental para resistir el dolor y proteger a los demás.</h3>
+            </div>
+        </div>  
+   
+
+    
+        <div class="blanco">
+            <div class="foto">        
+                <div class="foto_amuleto" id ="amuleto3">
+                </div>
+            </div>
+            <div class="texto">
+                <h1>EL ORIGEN</h1>
+                <h3>Puede despertar memorias dormidas en lugares, en objetos o incluso en personas.</h3>
+            </div>
+        </div>  
+    
+
+        <div class="blanco">
+            <div class="foto">        
+                <div class="foto_amuleto"  id ="amuleto4">
+                </div>
+            </div>
+            <div class="texto">
+                <h1>PIEDRA DEL SILENCIO</h1>
+                <h3>Permite moverse sin ser detectado por enemigos durante un tiempo</h3>
+            </div>
+        </div>  
+    
+  
+        <div class="blanco">
+            <div class="foto">        
+                <div class="foto_amuleto" id ="amuleto5">
+                </div>
+            </div>
+            <div class="texto">
+                <h1>SOL DE LOS LLANOS</h1>
+                <h3>Ilumina cuevas oscuras y repele criaturas nocturnas</h3>
+            </div>
+        </div>
+
+        <div class="blanco">
+          <div class="foto">        
+              <div class="foto_amuleto" id ="amuleto6">
+              </div>
+          </div>
+          <div class="texto">
+              <h1>MEDALLÓN CEIBA</h1>
+              <h3>Otorga salud al jugador cuando está cerca de arboles de Ceiba</h3>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <section id="descarga" class="descarga">  
+         <div class="imadiagonal">
+            <div class="botonesdescargajuego">
+              <h1>¡Descárgalo ya!</h1>
+              <p>Juega desde tu celular o computador</p>
+              <a href="apk/tu-apk.apk" download class="boton-descargaapk">DESCÁRGALO YA</a>
+            </div>
+            <div class="imaceldescarga">
+                <img src="img/mockupjuegodescarga.png " alt="Laptop y celular mostrando el juego" class="mockup-dispositivos">
+            </div>
+         </div>    
+      </section>
+
+
+      <section id="contacto">
+         <footer class="footer">
+            <div class="redes"> 
+              <a href="#instagram"><img src="img/instalogo@2x.png" alt="Logo de instagram" width="50px"  height="50px"></a>
+              <a href="#youtube">
+                <img src="img/play_video.png" alt="Logo de youtube" width="50px"  height="50px">
+              </a>
+              <a href="#Twitch">
+                <img src="img/twitchlogo.png" alt="Logo de Twitch" width="50px"  height="50px">
+              </a>
+            <div>
+            <p>@Candileja_fuego_eterno</p>
+            <p>&copy; 2025 Fuego Eterno by Katherine Portela & Vanesa Tocanchón :3</p>
+            <div class="links_pag"></div>
+         </footer>
+      </section>
+     </section>
+
+</body>
+</html>
